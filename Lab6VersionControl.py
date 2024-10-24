@@ -1,3 +1,4 @@
+# Jessica Sarraff
 #Encoding function: Encodes an 8-digit password by shifting each digit up by 3.
 def encode(password):
     encoded = ""
@@ -7,7 +8,13 @@ def encode(password):
     return encoded
 
 
-# !!!! Create decode function here. It's been called by main() when the user enters 2.
+# Decoding function: Decodes an 8-digit password by shifting each digit down by 3.
+def decode(encoded_password):
+    decoded = ""
+    for char in encoded_password:
+        new_digit = (int(char) - 3) % 10
+        decoded += str(new_digit)
+    return decoded
 
 
 if __name__ == "__main__":
